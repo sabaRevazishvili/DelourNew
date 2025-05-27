@@ -3,7 +3,6 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 export const navbarList = [
   { title: "მთავარი", path: "/" },
   { title: "სიახლეები", path: "/News" },
-  { title: "ტრენინგი", path: "/Training" },
   {
     title: "სერვისები",
     icon: faAngleUp,
@@ -12,6 +11,7 @@ export const navbarList = [
       { title: "FOODCERT", path: "/FOODCERT" },
       { title: "HORECA START", path: "/HORECA_START" },
       { title: "კრიზის მენეჯმენტი", path: "/crisis_menegment" },
+      { title: "ტრენინგი", path: "/Training" },
     ],
   },
   {

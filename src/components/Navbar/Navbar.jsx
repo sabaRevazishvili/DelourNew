@@ -20,8 +20,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex box-border items-center justify-between w-full bg-[white]  px-[50px] shadow-md z-1000 fixed top-0 left-0 right-0">
-        <img src={delourLogo} alt="Delour Logo" className="h-[40px]" />
+      <nav className="flex items-center justify-between w-full bg-linear-180 from-primary via-primary to-sky px-[50px] shadow-10xl z-1000 fixed top-0 left-0 right-0">
+        <img src={delourLogo} alt="Delour Logo" className="h-12" />
         <ul className="flex items-center justify-center gap-[40px]">
           {navbarList.map((item, index) =>
             item.submenu ? (
@@ -39,13 +39,19 @@ const Navbar = () => {
           )}
         </ul>
         <div className="flex items-center justify-center gap-[30px]">
-          <button
-            className="w-[80px] h-[40px] bg-[red]"
-            onClick={searchHandler}
-          >
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="text-lg" />
+          <button className=" cursor-pointer" onClick={searchHandler}>
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              className="text-2xl font-extrabold text-accent"
+            />
           </button>
-          <Link to="/contact">კონტაქტი</Link>
+          <Link
+            // className="px-4 py-2 border border-accent rounded-full bg-accent hover:bg-sky hover:text-black transition-colors duration-300"
+            className="button"
+            to="/contact"
+          >
+            კონტაქტი
+          </Link>
         </div>
       </nav>
       {openSearch && <Search setOpenSearch={setOpenSearch} />}

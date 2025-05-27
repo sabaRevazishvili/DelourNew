@@ -15,9 +15,9 @@ const NavSubMenu = ({ item, openMenu, setOpenMenu }) => {
         console.log("Mouse left:", item.title);
         setOpenMenu(null);
       }}
-      className="relative py-6"
+      className="relative py-6 cursor-pointer"
     >
-      <button className=" flex flex-row items-center gap-[10px] text-base ">
+      <button className=" flex flex-row items-center gap-[10px] text-base cursor-pointer">
         {item.title}
         {item.icon && (
           <FontAwesomeIcon
