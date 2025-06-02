@@ -1,16 +1,23 @@
 @import url("//cdn.web-fonts.ge/fonts/bpg-arial-caps/css/bpg-arial-caps.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-mrgvlovani-caps/css/bpg-mrgvlovani-caps.min.css");
+
 @import "tailwindcss";
 
 @theme {
+  --font-big: "BPG Arial Caps", sans-serif;
+  --font-medium: "BPG Mrgvlovani Caps", sans-serif;
+  --font-small: "BPG Arial", sans-serif;
   --color-primary: #d9d7ea;
   --color-accent: #425059;
   --color-text: #1f2937;
   --color-sky: #f8f8ff;
+  --color-accent-light: #cccae1;
 }
 
 @layer components {
   .button {
-    @apply bg-accent border-3 border-accent text-sky font-medium py-2 px-5 rounded-lg transition duration-300 ease-in-out hover:bg-primary hover:text-accent hover:font-bold;
+    @apply bg-accent border-3 border-accent text-sky py-2 px-5 rounded-lg transition duration-300 ease-in-out hover:bg-transparent hover:text-accent hover:font-bold font-big;
   }
 }
 #root {
@@ -20,14 +27,24 @@
 }
 
 body {
-  background-color: #fff;
   background-image: radial-gradient(
     46.99% 72.3% at 39.8% 50%,
     hsla(0, 0%, 100%, 0.3) 0,
-    #d9d7ea 100%
+    #f8f8ff 100%
   );
+  background: #d9d7ea;
   height: 1000px;
 }
-* {
+
+p {
+  font-family: "BPG Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "BPG Arial Caps", sans-serif;
 }
