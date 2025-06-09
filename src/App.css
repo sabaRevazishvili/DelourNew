@@ -1,6 +1,7 @@
 @import url("//cdn.web-fonts.ge/fonts/bpg-arial-caps/css/bpg-arial-caps.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-mrgvlovani-caps/css/bpg-mrgvlovani-caps.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 @import "tailwindcss";
 
@@ -8,11 +9,14 @@
   --font-big: "BPG Arial Caps", sans-serif;
   --font-medium: "BPG Mrgvlovani Caps", sans-serif;
   --font-small: "BPG Arial", sans-serif;
+  --font-other: "Outfit", sans-serif;
   --color-primary: #d9d7ea;
   --color-accent: #425059;
   --color-text: #1f2937;
   --color-sky: #f8f8ff;
   --color-accent-light: #cccae1;
+  --color-border: #eee;
+  --color-fill: #f7f8fa;
 }
 
 @layer components {
@@ -27,12 +31,12 @@
 }
 
 body {
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     46.99% 72.3% at 39.8% 50%,
     hsla(0, 0%, 100%, 0.3) 0,
     #f8f8ff 100%
   );
-  background: #d9d7ea;
+  background: #d9d7ea; */
   height: 1000px;
 }
 
@@ -40,11 +44,47 @@ p {
   font-family: "BPG Arial", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1:lang(ka),
+h2:lang(ka),
+h3:lang(ka),
+h4:lang(ka),
+h5:lang(ka),
+h6:lang(ka) {
   font-family: "BPG Arial Caps", sans-serif;
+}
+
+h1:lang(en),
+h2:lang(en),
+h3:lang(en),
+h4:lang(en),
+h5:lang(en),
+h6:lang(en) {
+  font-family: "Outfit", sans-serif;
+}
+
+.splide__arrow svg {
+  fill: #425059 !important; /* Change arrow color */
+}
+
+.splide__arrow:hover:not(:disabled) svg {
+  opacity: 0.8;
+}
+
+.splide__pagination__page {
+  background: #425059 !important; /* Pagination dots */
+  opacity: 0.5;
+}
+
+.splide__pagination__page.is-active {
+  background: #425059 !important; /* Active dot */
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+button.splide__arrow.splide__arrow--prev {
+  margin-right: 20px !important;
+}
+
+button.splide__arrow.splide__arrow--next {
+  margin-left: 20px !important;
 }
