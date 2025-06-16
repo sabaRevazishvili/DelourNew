@@ -81,10 +81,10 @@ h6:lang(en) {
   transform: scale(1.2);
 }
 
-button.splide__arrow.splide__arrow--prev {
-  margin-right: 20px !important;
+/* In your CSS file */
+#news-slider .splide__arrow--prev {
+  left: 5px !important;
 }
-
-button.splide__arrow.splide__arrow--next {
-  margin-left: 20px !important;
+#news-slider .splide__arrow--next {
+  right: 5px !important;
 }
